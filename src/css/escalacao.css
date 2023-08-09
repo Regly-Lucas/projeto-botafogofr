@@ -1,0 +1,67 @@
+main{
+    background:#030100;
+}
+.container{
+    position: relative;
+    width: 185px;
+    height: 250px;
+    margin: 0 auto;
+   }
+
+.carta{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+}
+
+.frente{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.atras{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.container:hover .carta{
+    transform:rotateY(180deg);
+    cursor: pointer;
+}
+
+.container-zaga,
+.container-meia
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 100px 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.container-ataque,
+.container-goleiro{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 100px 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+@media (max-width: 715px){
+    .rodape h3{
+        font-size: 20px;
+    }
+    
+}
